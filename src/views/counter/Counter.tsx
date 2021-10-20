@@ -19,7 +19,7 @@ export function Counter() {
           aria-label='Decrement value'
           onClick={() => dispatch(CounterSlice.decrement())}
         >
-          -
+          - {process.env.TITLE} s
         </button>
         <span className={styles.value}>{count}</span>
         <button
@@ -37,9 +37,9 @@ export function Counter() {
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
-        <button className={styles.button} onClick={() => dispatch(CounterSlice.incrementByAmount(incrementValue))}>
+        {/* <button className={styles.button} onClick={() => dispatch(CounterSlice.incrementByAmount(incrementValue))}>
           Add Amount
-        </button>
+        </button> */}
         <button className={styles.asyncButton} onClick={() => dispatch(CounterSlice.incrementAsync(incrementValue))}>
           Add Async
         </button>
