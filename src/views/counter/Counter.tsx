@@ -19,7 +19,7 @@ export function Counter() {
           aria-label='Decrement value'
           onClick={() => dispatch(CounterSlice.decrement())}
         >
-          -
+          - {process.env.TITLE}
         </button>
         <span className={styles.value}>{count}</span>
         <button
